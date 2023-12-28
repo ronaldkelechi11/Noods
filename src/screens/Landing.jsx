@@ -2,7 +2,7 @@
 const Landing = () => {
     return (
         <div className='w-screen h-screen bg-primary flex justify-center items-center'>
-            <p className='text-5xl bg-white'>Hello</p>
+            <p className='text-5xl text-white'>Hello</p>
         </div>
     )
 }
