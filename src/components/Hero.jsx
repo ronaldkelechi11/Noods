@@ -10,6 +10,8 @@ const Hero = () => {
                 <Navbar />
 
                 <div className="flex flex-wrap flex-col justify-center items-center w-full h-full p-3 gap-3">
+                    <p className="text-white text-8xl md:text-7xl text-center font-billabong"
+                    >No<span className="text-primary">ods</span></p>
                     <motion.p
                         initial={{ x: -1000, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}

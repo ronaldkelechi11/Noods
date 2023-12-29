@@ -11,7 +11,7 @@ const Navbar = () => {
     }
     return (
         <div className='h-auto z-50 w-full p-4 flex flex-wrap items-center justify-between sticky top-0 '>
-            <NavLink reloadDocument className="text-white text-4xl md:text-5xl font-billabong"
+            <NavLink reloadDocument className="text-white text-4xl md:text-6xl font-billabong"
             >No<span className="text-primary">ods</span></NavLink>
 
             <div className="hidden md:flex flex-row gap-5 text-primary">
