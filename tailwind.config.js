@@ -11,7 +11,7 @@ export default {
         secondary: '#EACC05'
       },
       backgroundImage: {
-        heroPattern: "url('/src/assets/3.jpg')"
+        heroPattern: "url('/src/assets/images/3.jpg')"
       },
       fontFamily: {
         billabong: 'Billabong',

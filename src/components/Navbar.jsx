@@ -40,7 +40,7 @@ function NavLinks() {
     return (
         <div className='text-2xl font- text-white flex flex-col justify-center md:flex-row gap-4 items-center'>
             <Link reloadDocument className={navbarStyling}>Home</Link>
-            <a className={navbarStyling} href="#aboutus">About</a>
+            <a className={navbarStyling} href="#about">About</a>
             <a className={navbarStyling} href="#contact">Contact</a>
         </div >
     )

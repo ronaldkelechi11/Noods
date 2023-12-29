@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
