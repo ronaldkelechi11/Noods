@@ -1,12 +1,11 @@
 import Hero from "../components/Hero"
+import Menu from "../components/Menu"
 
 const Landing = () => {
     return (
         <div className='w-screen flex flex-col justify-center items-center'>
             <Hero />
-            <div className="w-screen h-screen bg-blue-500">
-
-            </div>
+            <Menu />
         </div>
     )
 }
