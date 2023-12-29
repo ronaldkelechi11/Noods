@@ -16,7 +16,7 @@ const Menu = () => {
                 "id": 2,
                 "name": "Jollof Noodles and Chicken",
                 "price": "3,000",
-                "image": "/src/assets/images/1.jpg",
+                "image": "../assets/images/1.jpg",
                 "description": "Supmtious Nigerian Jollof Noodles"
             },
             {
