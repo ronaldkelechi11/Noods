@@ -35,7 +35,7 @@ const Hero = () => {
                     </motion.p>
 
                     <div className="flex flex-row mt-5">
-                        <button className="border-white border-2 border-solid text-white font-billabong text-2xl p-[10px_40px] rounded-full text-center hover:bg-white hover:text-black hover:scale-0 transiti">Order Now</button>
+                        <button className="border-white border-2 border-solid text-white font-billabong text-2xl p-[10px_40px] rounded-full text-center hover:bg-white hover:text-black hover:scale-105 ">Order Now</button>
                     </div>
                 </div>
 
