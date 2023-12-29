@@ -84,6 +84,8 @@ const Menu = () => {
             },
         ]
     )
+
+    
     return (
         <div className="w-screen flex flex-col p-3">
             <p className="text-center text-4xl font-billabong md:text-5xl text-black">..Our Menu..</p>
