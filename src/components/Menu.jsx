@@ -4,7 +4,15 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 
 const Menu = () => {
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState([
+        {
+            "id": 1,
+            "name": "Placeholder",
+            "price": "9,999",
+            "image": "",
+            "description": "placeholder"
+        },
+    ])
     axios.get('/src/data/data.json')
         .then((result) => {
             setItems(result.data)
