@@ -32,7 +32,7 @@ const Menu = () => {
 
             <div className="md:grid md:grid-cols-4 gap-5 flex flex-col">
                 {
-                    items?.map(menuitem => {
+                    items.map(menuitem => {
                         return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
                     })
                 }
