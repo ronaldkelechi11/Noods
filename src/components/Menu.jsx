@@ -5,15 +5,24 @@ import { useEffect, useState } from "react"
 
 const Menu = () => {
     const menuitemUrl = '/src/data/data.json'
-    const [items, setItems] = useState([
-        {
-            "id": 1,
-            "name": "Placeholder",
-            "price": "9,999",
-            "image": "",
-            "description": "placeholder"
-        },
-    ])
+    const [items, setItems] = useState(
+        [
+            {
+                "id": 1,
+                "name": "Placeholder",
+                "price": "9,999",
+                "image": "",
+                "description": "placeholder"
+            },
+            {
+                "id": 2,
+                "name": "Placeholder",
+                "price": "9,999",
+                "image": "",
+                "description": "placeholder"
+            }
+        ]
+    )
 
     useEffect(() => {
         axios.get(menuitemUrl, { method: "GET" })
