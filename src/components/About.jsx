@@ -1,20 +1,16 @@
 
 const About = () => {
     return (
-        <div id='about' className="w-screen h-[70vh] flex flex-col p-3 gap-4">
+        <div id='about' className="w-screen flex flex-col p-3 gap-4">
+            <div className="text-black font-extrabold font-billabong uppercase text-center text-5xl md:text-6xl">..About Us..</div>
 
-            <h1 className="font-billabong text-center text-5xl">..About <span className="text-primary">Noods</span>..</h1>
-
-            <div className="w-full h-full flex flex-row p-5">
-                <div className="w-[50%] h-full">
-                    <h1 className="font-billabong text-2xl">Our Story</h1>
-
+            <div className="w-full h-full flex flex-col md:items-center md:flex-row">
+                <div className="h-[50%] w-full md:w-[50%] md:h-full flex justify-center items-center">
+                    <img src="../../src/assets/images/logo.png" alt="" />
                 </div>
 
-
-                <div className="w-[50%] h-full">
-                    <h1 className="font-billabong text-2xl text-end">Our Vision</h1>
-
+                <div className="h-auto w-full md:w-[50%] md:h-full">
+                    <strong className="text-primary">Noods</strong>
                 </div>
             </div>
         </div>

@@ -1,11 +1,7 @@
 /* eslint-disable react/prop-types */
 
-import axios from "axios"
-import { useEffect, useState } from "react"
-
 const Menu = () => {
-    const menuitemUrl = '/src/data/data.json'
-    const [items, setItems] = useState(
+    const items =
         [
             {
                 "id": 1,
@@ -18,14 +14,14 @@ const Menu = () => {
                 "id": 2,
                 "name": "Jollof Noodles and Chicken",
                 "price": "3,000",
-                "image": "/public/assets/images/jollof.jpg",
+                "image": "../assets/images/jollof.jpg",
                 "description": "Supmtious Nigerian Jollof Noodles"
             },
             {
                 "id": 3,
                 "name": "Chinese Noodles",
                 "price": "3,000",
-                "image": "/public/assets/images/chinese.jpg",
+                "image": "../assets/images/chinese.jpg",
                 "description": "Explore our Intercontinental recipe"
             },
             {
@@ -60,21 +56,21 @@ const Menu = () => {
                 "id": 8,
                 "name": "Spicy Suya Noodles",
                 "price": "3,000",
-                "image": "/public/assets/images/suya.jpg",
+                "image": "../assets/images/suya.jpg",
                 "description": "Peppered Noodles with Suya Chunks"
             },
             {
                 "id": 9,
                 "name": "Native Noodles",
                 "price": "1,900",
-                "image": "/public/assets/images/native.jpg",
+                "image": "../assets/images/native.jpg",
                 "description": "A taste of special African Delicacy"
             },
             {
                 "id": 10,
                 "name": "Oriental Noodles and Chicken",
                 "price": "1,900",
-                "image": "/public/assets/images/oriental.jpg",
+                "image": "../assets/images/oriental.jpg",
                 "description": "Intercontinental Recipe"
             },
             {
@@ -85,7 +81,6 @@ const Menu = () => {
                 "description": "Sweet and Yummy"
             }
         ]
-    )
 
 
 

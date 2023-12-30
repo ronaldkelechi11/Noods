@@ -14,13 +14,14 @@ const Hero = () => {
                     <motion.img
                         initial={{ y: -1000, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 4, type: 'spring' }}
                         src="/src/assets/images/logo.png" alt="" />
 
 
                     <motion.p
                         initial={{ x: -1000, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 3, type: 'spring' }}
+                        transition={{ duration: 4, type: 'spring' }}
                         className="text-white text-4xl md:text-7xl font-billabong text-center">
                         Delicious <span className="text-primary">Special</span> Noodles
                     </motion.p>
@@ -28,7 +29,7 @@ const Hero = () => {
                     <motion.p
                         initial={{ y: 1000, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 3, type: 'spring' }}
+                        transition={{ duration: 4, type: 'spring' }}
                         className="text-white font-poppins text-sm md:text-xl text-center">
                         <TypeAnimation
                             sequence={[
@@ -41,9 +42,13 @@ const Hero = () => {
                         />
                     </motion.p>
 
-                    <div className="flex flex-row mt-5">
+                    <motion.div
+                        initial={{ x: 1000, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 4, type: 'spring' }}
+                        className="flex flex-row mt-5">
                         <button className="border-white border-2 border-solid text-white font-billabong text-2xl p-[10px_40px] rounded-full text-center hover:bg-white hover:text-black hover:scale-105 ">Order Now</button>
-                    </div>
+                    </motion.div>
                 </div>
 
             </div>
