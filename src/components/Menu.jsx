@@ -11,7 +11,7 @@ const Menu = () => {
                 "id": 1,
                 "name": "Noodles and Chicken",
                 "price": "2,900",
-                "image": "/src/assets/images/1.jpg",
+                "image": "/assets/images/1.jpg",
                 "description": "Chicken and Noods in one plate"
             },
             {
