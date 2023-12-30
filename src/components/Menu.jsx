@@ -4,6 +4,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 
 const Menu = () => {
+    const menuitemUrl = '/src/data/data.json'
     const [items, setItems] = useState([
         {
             "id": 1,
@@ -13,12 +14,16 @@ const Menu = () => {
             "description": "placeholder"
         },
     ])
-    axios.get('/src/data/data.json')
-        .then((result) => {
-            setItems(result.data)
-        }).catch((err) => {
-            console.log(err);
-        });
+
+    useEffect(() => {
+        axios.get(menuitemUrl, { method: "GET" })
+            .then((result) => {
+                setItems(result.data)
+            }).catch((err) => {
+                console.log(err);
+            });
+
+    }, [])
 
 
     return (
