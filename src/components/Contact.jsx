@@ -30,24 +30,6 @@ const Contact = () => {
 
                 <button className="bg-primary h-[60px] uppercase rounded-xl shadow-sm font-extrabold text-white" onClick={submitContactForm} type="submit">Done</button>
             </div>
-
-
-            <div className="flex flex-row justify-center items-center gap-5 mt-5">
-                <div className="flex flex-row items-center gap-2">
-                    <FaWhatsapp color="#128c7e" size={32} />
-                    <p className="font-poppins">+234 9136 309 200</p>
-                </div>
-
-                <div className="flex flex-row items-center gap-2">
-                    <FaPhone color="#128c7e" size={32} />
-                    <p className="font-poppins">+234 7065 006 308</p>
-                </div>
-
-                <div className="flex flex-row items-center gap-1">
-                    <FaFacebook color="blue" size={32} />
-                    <p className="font-poppins">Noods Noods</p>
-                </div>
-            </div>
         </div>
     )
 }

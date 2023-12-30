@@ -12,7 +12,9 @@ const Navbar = () => {
     return (
         <div className='h-auto z-50 w-full p-4 flex flex-wrap items-center justify-between sticky top-0 '>
             <NavLink reloadDocument className="text-white text-3xl md:text-5xl font-billabong"
-            >No<span className="text-primary">ods</span></NavLink>
+            >
+                <img src="/src/assets/images/logo.png" className="w-15 h-10" />
+            </NavLink>
 
             <div className="hidden md:flex flex-row gap-5 text-primary">
                 <NavLinks />
