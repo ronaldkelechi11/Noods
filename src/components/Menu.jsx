@@ -1,4 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
+
+import { motion, useAnimation, useInView } from "framer-motion"
+import { useEffect, useRef } from "react"
 
 const Menu = () => {
     const items =
@@ -75,9 +79,29 @@ const Menu = () => {
 
 
 function MenuItem({ menuitem }) {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
+    const mainControls = useAnimation()
+
+    useEffect(() => {
+        mainControls.start('visible')
+        console.log("IS IN VIEW");
+    }, [isInView,])
+
+
     return (
         <div className="flex flex-col h-80 md:h-100">
-            <img src={menuitem.image} className="h-[70%] md:h-[60%] w-full object-cover object-center" loading="eager" />
+            <motion.img
+                ref={ref}
+                variants={{
+                    hidden: { x: 1000, opacity: 0 },
+                    visible: { x: 0, opacity: 1 }
+                }}
+                initial='hidden'
+                animate={mainControls}
+                transition={{ duration: 0.9, delay: 0.3 }}
+                src={menuitem.image}
+                className="h-[70%] md:h-[60%] w-full object-cover object-center" loading="eager" />
 
             <div className="w-full h-auto flex flex-col gap-1 justify-between p-2 text-center">
                 <p className="text-3xl md:text-2xl font-billabong">{menuitem.name}</p>
