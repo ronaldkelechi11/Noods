@@ -15,7 +15,7 @@ const Footer = () => {
 
                     <div className="flex flex-col mt-3">
                         <h4 className='font-bold font-lato text-center md:text-start'>Email</h4>
-                        <a href='email:noodsnigeria@gmail.com' className='font-lato text-center md:text-start'>
+                        <a href='mailto:noodsnigeria@gmail.com' className='font-lato text-center md:text-start'>
                             noodsnigeria@gmail.com
                         </a>
                     </div>
