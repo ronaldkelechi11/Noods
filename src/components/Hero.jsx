@@ -47,7 +47,7 @@ const Hero = () => {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 4, type: 'spring' }}
                         className="flex flex-row mt-5">
-                        <button className="border-white border-2 border-solid text-white font-billabong text-2xl p-[10px_40px] rounded-full text-center hover:bg-white hover:text-black hover:scale-105 ">Order Now</button>
+                        <a href='https://wa.me/+2349136309200' className="border-white border-2 border-solid text-white font-billabong text-2xl p-[10px_40px] rounded-full text-center hover:bg-white hover:text-black hover:scale-105 ">Order Now</a>
                     </motion.div>
                 </div>
 

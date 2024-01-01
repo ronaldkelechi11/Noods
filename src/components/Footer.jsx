@@ -16,26 +16,29 @@ const Footer = () => {
 
                     <div className="flex flex-col mt-3">
                         <h4 className='font-bold font-lato text-center md:text-start'>Email</h4>
-                        <h5 className='font-lato text-center md:text-start'>
-
-                        </h5>
+                        <a href='email:noodsnigeria@gmail.com' className='font-lato text-center md:text-start'>
+                            noodsnigeria@gmail.com
+                        </a>
                     </div>
 
                     <div className="flex flex-col mt-3">
                         <h4 className='font-bold font-lato text-center md:text-start'>Phone Number</h4>
-                        <h5 className='font-lato text-center md:text-start'></h5>
+                        <a href="tel:+2347065006308" className='font-lato text-center md:text-start'>
+                            +234 7065 006 308
+                        </a>
                     </div>
 
                     <div className="flex flex-col mt-3">
-                        <h4 className='font-bold font-lato text-center md:text-start'>Whatsapp</h4>
-                        <h5 className='font-lato text-center md:text-start'></h5>
+                        <a href='https://wa.me/+2349136309200' className='font-bold font-lato text-center md:text-start'>Whatsapp</a>
+                        <h5 className='font-lato text-center md:text-start'>+234 9136 309 200</h5>
                     </div>
                 </div>
 
 
                 <div className="text-center flex flex-col gap-5 pb-3 mt-5 md:w-[40%]">
-                    <h1 className='font-lato text-xl'>Track your payments, generate invoices and receive payments fast and swift now.</h1>
-                    <div className="bg-darkPrimary text-white font-lato cursor-pointer w-full rounded-lg p-[15px_40px] hover:scale-110 transition-all">Order</div>
+                    <h1 className='font-lato text-xl'>Get premium meals right at your tips fingerprint</h1>
+
+                    <a href='https://wa.me/+2349136309200' className="border-white border-2 border-solid text-white font-billabong text-2xl p-[10px_40px] rounded-full text-center hover:bg-white hover:text-black hover:scale-105">Order now</a>
                 </div>
 
             </div>
@@ -43,7 +46,7 @@ const Footer = () => {
 
             <div className="flex flex-col gap-3">
                 <hr className='' />
-                <div className="text-center text-lg  md:text-2xl">© 2024 NOODS IS A  </div>
+                <div className="text-center text-lg  md:text-2xl">© 2024 <br /> NOODS IS UNDER MAMALA FOOD VENTURES</div>
             </div>
 
         </div>
