@@ -5,81 +5,54 @@ const Menu = () => {
         [
             {
                 "id": 1,
-                "name": "Noodles and Chicken",
-                "price": "2,900",
-                "image": "",
-                "description": "Chicken and Noods in one plate"
-            },
-            {
-                "id": 2,
-                "name": "Jollof Noodles and Chicken",
-                "price": "3,000",
-                "image": "/assets/images/jollof.jpg",
-                "description": "Supmtious Nigerian Jollof Noodles"
-            },
-            {
-                "id": 3,
-                "name": "Chinese Noodles",
-                "price": "3,000",
-                "image": "/assets/images/chinese.jpg",
-                "description": "Explore our Intercontinental recipe"
-            },
-            {
-                "id": 4,
-                "name": "Garnished Beef Noodles",
-                "price": "2,900",
-                "image": "",
-                "description": "Too sweet and Savoury"
-            },
-            {
-                "id": 5,
-                "name": "Creamy Pasta",
-                "price": "3,000",
-                "image": "/assets/images/creamy.jpg",
-                "description": "Explore Special Creamy Macaronni"
-            },
-            {
-                "id": 6,
-                "name": "Peppered Noodles and Chicken",
-                "price": "3,000",
-                "image": "",
-                "description": "Ohh that's spicy"
-            },
-            {
-                "id": 7,
-                "name": "Garnished Macaroni and Chicken",
-                "price": "2,500",
-                "image": "",
-                "description": "Sweet and Yummy"
-            },
-            {
-                "id": 8,
                 "name": "Spicy Suya Noodles",
                 "price": "3,000",
                 "image": "/assets/images/suya.jpg",
                 "description": "Peppered Noodles with Suya Chunks"
             },
             {
-                "id": 9,
+                "id": 2,
                 "name": "Native Noodles",
-                "price": "1,900",
+                "price": "2,500",
                 "image": "/assets/images/native.jpg",
                 "description": "A taste of special African Delicacy"
             },
             {
-                "id": 10,
+                "id": 3,
+                "name": "Jollof Noodles and Chicken",
+                "price": "2,900",
+                "image": "/assets/images/jollof.jpg",
+                "description": "Supmtious Nigerian Jollof Noodles"
+            },
+            {
+                "id": 4,
+                "name": "Chinese Noodles and Chicken",
+                "price": "3,000",
+                "image": "/assets/images/chinese.jpg",
+                "description": "Explore our Intercontinental recipe"
+            },
+            {
+                "id": 5,
                 "name": "Oriental Noodles and Chicken",
-                "price": "1,900",
+                "price": "3,000",
                 "image": "/assets/images/oriental.jpg",
                 "description": "Intercontinental Recipe"
             },
             {
-                "id": 11,
-                "name": "Garnished Spaghetti and Chicken",
-                "price": "1,900",
-                "image": "",
-                "description": "Sweet and Yummy"
-            }
+                "id": 6,
+                "name": "Creamy Pasta and Chicken",
+                "price": "3,500",
+                "image": "/assets/images/creamy.jpg",
+                "description": "Explore Special Creamy Macaronni"
+            },
+            {
+                "id": 7,
+                "name": "Rotini Pasta and Chicken",
+                "price": "3,500",
+                "image": "/assets/images/rotini.jpg",
+                "description": "A yummy delicacy that serves your taste buds"
+            },
+
         ]
 
 
@@ -104,7 +77,7 @@ const Menu = () => {
 function MenuItem({ menuitem }) {
     return (
         <div className="flex flex-col h-80 md:h-100">
-            <img src={menuitem.image} className="h-[80%] md:h-[60%] w-full object-cover object-center" loading="eager" />
+            <img src={menuitem.image} className="h-[70%] md:h-[60%] w-full object-cover object-center" loading="eager" />
 
             <div className="w-full h-auto flex flex-col gap-1 justify-between p-2 text-center">
                 <p className="text-3xl md:text-2xl font-billabong">{menuitem.name}</p>

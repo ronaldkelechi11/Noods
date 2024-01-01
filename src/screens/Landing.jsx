@@ -1,5 +1,6 @@
 import About from "../components/About"
 import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import Menu from "../components/Menu"
 
@@ -10,6 +11,7 @@ const Landing = () => {
             <Menu />
             <About />
             <Contact />
+            <Footer />
         </div>
     )
 }
