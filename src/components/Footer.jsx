@@ -45,7 +45,7 @@ const Footer = () => {
 
             <div className="flex flex-col gap-3">
                 <hr className='' />
-                <div className="text-center text-lg  md:text-2xl">© 2024 <br /> NOODS IS UNDER MAMALA FOOD VENTURES</div>
+                <div className="text-center text-lg  md:text-2xl">© 2024 <br /> NOODS IS UNDER MAMAMELA FOOD VENTURES</div>
             </div>
 
         </div>
