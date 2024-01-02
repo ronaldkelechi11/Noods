@@ -106,7 +106,7 @@ function MenuItem({ menuitem }) {
                 className="h-[70%] md:h-[60%] w-full object-cover object-center" loading="eager" />
 
             <div className="w-full h-auto flex flex-col gap-1 justify-between p-2 text-center">
-                <p className="text-3xl md:text-2xl font-billabong font-extrabold">{menuitem.name}</p>
+                <p className="text-3xl md:text-2xl font-billabong">{menuitem.name}</p>
                 <p className="text-[11px] font-poppins text-slate-400">{menuitem.description}</p>
                 <p className="font-extrabold">N3,500</p>
                 <p className="text-secondary font-extrabold font-poppins">Free Delivery</p>

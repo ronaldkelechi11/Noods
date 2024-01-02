@@ -7,7 +7,7 @@ const About = () => {
 
             <div className="w-full h-full flex flex-col md:items-center md:flex-row">
                 <div className="h-[50%] p-3 w-full md:w-[50%] bg-black md:h-full flex justify-center items-center">
-                    <img src="../../src/assets/images/logo.png" alt="" />
+                    <img src="/assets/images/logo.png" alt="" />
                 </div>
 
                 <div className="h-auto w-full md:w-[50%] md:h-full p-3">

@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <div className="h-auto w-screen md:h-[70vh] flex flex-col bg-black text-white gap-3 p-3 md:p-5" id="contactus">
+        <div className="w-screen flex flex-col bg-black text-white gap-3 p-3 md:p-5">
 
             <div className="flex flex-col md:flex-row justify-center items-center h-full">
 
@@ -31,13 +31,27 @@ const Footer = () => {
                         <a href='https://wa.me/+2349136309200' className='font-bold font-lato text-center md:text-start'>Whatsapp</a>
                         <h5 className='font-lato text-center md:text-start'>+234 9136 309 200</h5>
                     </div>
+
+                    {/* Available on Playstore button */}
+                    <div className="flex flex-col mt-3">
+                        <h5 className='font-bold font-lato text-center md:text-start'>
+                            Our app is now available on Google Play Store
+                        </h5>
+                        <a href='#' className='self-center md:self-start'>
+                            <img src="/assets/images/google-play-badge.png" className="w-full h-32" />
+                        </a>
+                    </div>
+
                 </div>
 
 
                 <div className="text-center flex flex-col gap-5 pb-3 mt-5 md:w-[40%]">
                     <h1 className='font-lato text-xl'>Get premium meals right at your tips fingerprint</h1>
 
-                    <a href='https://wa.me/+2349136309200' className="border-white border-2 border-solid text-white font-billabong text-2xl p-[10px_40px] rounded-full text-center hover:bg-white hover:text-black hover:scale-105">Order now</a>
+                    <a href='https://wa.me/+2349136309200'
+                        className="border-white border-2 border-solid text-white font-billabong text-2xl p-[10px_40px] rounded-full text-center hover:bg-white hover:text-black hover:scale-105">
+                        Order now
+                    </a>
                 </div>
 
             </div>

@@ -11,7 +11,7 @@ const Contact = () => {
 
     }
     return (
-        <div id="contact" className="w-screen h-[80vh] flex flex-col p-3">
+        <div id="contact" className="w-screen flex flex-col p-3">
             <div className="text-black text-center uppercase font-poppins text-3xl md:text-5xl">Contact Us</div>
             <div className="text-gray-400 text-sm font-poppins text-center">Feel free to contact us to order some noods.</div>
 
@@ -29,6 +29,12 @@ const Contact = () => {
                     value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
 
                 <button className="bg-primary h-[60px] uppercase rounded-xl shadow-sm font-extrabold text-white" onClick={submitContactForm} type="submit">Done</button>
+            </div>
+
+            <div className="w-full p-3">
+                <a href="https://wa.me/+2349136309200" className="flex flex-row items-center justify-center cursor-pointer">
+                    <img src="/assets/images/whatsapp-button.png" className="w-[30%] h-[60%]" alt="" />
+                </a>
             </div>
         </div>
     )
