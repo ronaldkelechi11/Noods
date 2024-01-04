@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { FaFacebook, FaMailchimp, FaPhone, FaWhatsapp } from "react-icons/fa6"
 
 const Contact = () => {
     const [name, setName] = useState("")
