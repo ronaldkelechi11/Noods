@@ -1,5 +1,12 @@
+import { saveAs } from "file-saver"
 
 const Footer = () => {
+    const apkUrl = "/assets/apk/Noods.apk"
+
+    function downloadApk() {
+        saveAs(apkUrl, 'Noods.apk')
+    }
+
     return (
         <div className="w-screen flex flex-col bg-black text-white gap-3 p-3 md:p-5">
 
@@ -35,11 +42,11 @@ const Footer = () => {
                     {/* Available on Playstore button */}
                     <div className="flex flex-col mt-3">
                         <h5 className='font-bold font-lato text-center md:text-start'>
-                            Our app is now available on Google Play Store
+                            Our app is now available for download
                         </h5>
-                        <a href='#' className='self-center md:self-start'>
-                            <img src="/assets/images/google-play-badge.png" className="w-full h-32" />
-                        </a>
+                        <div className='self-center md:self-start' onClick={downloadApk} >
+                            <img src="/assets/images/google-play-badge.png" className="w-full h-32 cursor-pointer" />
+                        </div>
                     </div>
 
                 </div>
