@@ -23,7 +23,7 @@ const Hero = () => {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 4, type: 'spring' }}
                         className="text-white text-4xl md:text-7xl font-billabong text-center">
-                        Delicious <span className="text-primary">Special</span> Noodles
+                        Delicious <span className="text-primary">Special</span> Delicacies
                     </motion.p>
 
                     <motion.p
@@ -33,9 +33,9 @@ const Hero = () => {
                         className="text-white font-poppins text-sm md:text-xl text-center">
                         <TypeAnimation
                             sequence={[
-                                "Are you hungry for some Noodles from Noods?", 1000,
+                                "Are you hungry for some Delicacies from Noods?", 1000,
                                 "Get the best noodles in town right at your finger tips", 1000,
-                                "Order your Noods Noodles now ", 1000
+                                "Order your Noods Delicacies now ", 1000
                             ]}
                             speed={50}
                             repeat={Infinity}

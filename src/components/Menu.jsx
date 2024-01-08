@@ -18,41 +18,55 @@ const Menu = () => {
             },
             {
                 "id": 2,
+                "name": "Delicous Oriental Rice and chicken with desert",
+                "price": "2,500",
+                "image": "/assets/images/oriental_rice.jpg",
+                "description": "A taste of special African Delicacy"
+            },
+            {
+                "id": 3,
+                "name": "Well-garnished Fried rice and chicken",
+                "price": "3,500",
+                "image": "/assets/images/garnished_fried_rice.jpg",
+                "description": "A taste of special African Delicacy"
+            },
+            {
+                "id": 4,
                 "name": "Native Noodles",
                 "price": "2,500",
                 "image": "/assets/images/native.jpg",
                 "description": "A taste of special African Delicacy"
             },
             {
-                "id": 3,
+                "id": 5,
                 "name": "Jollof Noodles and Chicken",
                 "price": "2,900",
                 "image": "/assets/images/jollof.jpg",
                 "description": "Supmtious Nigerian Jollof Noodles"
             },
             {
-                "id": 4,
+                "id": 6,
                 "name": "Chinese Noodles and Chicken",
                 "price": "3,000",
                 "image": "/assets/images/chinese.jpg",
                 "description": "Explore our Intercontinental recipe"
             },
             {
-                "id": 5,
+                "id": 7,
                 "name": "Oriental Noodles and Chicken",
                 "price": "3,000",
                 "image": "/assets/images/oriental.jpg",
                 "description": "Intercontinental Recipe"
             },
             {
-                "id": 6,
+                "id": 8,
                 "name": "Creamy Pasta and Chicken",
                 "price": "3,500",
                 "image": "/assets/images/creamy.jpg",
                 "description": "Explore Special Creamy Macaronni"
             },
             {
-                "id": 7,
+                "id": 9,
                 "name": "Rotini Pasta and Chicken",
                 "price": "3,500",
                 "image": "/assets/images/rotini.jpg",
@@ -88,7 +102,7 @@ function MenuItem({ menuitem }) {
     useEffect(() => {
         mainControls.start('visible')
         console.log("IS IN VIEW");
-    }, [isInView,])
+    }, [isInView])
 
 
     return (
