@@ -8,28 +8,35 @@ const Contact = () => {
     const [message, setMessage] = useState("")
     const [marketer, setMarketer] = useState("")
 
-    const apiUrl = 'https://formsubmit.co/ronaldkelechi11@gmail.com'
+    const apiUrl = `https://formsubmit.co/'noodsnigeria@gmail.com'`
 
     function submitContactForm(e) {
         e.preventDefault();
+        let data = new FormData();
 
-        var newFormData = new FormData()
-        newFormData.append('name', name)
-        newFormData.append('email', email)
-        newFormData.append('telephone', telephone)
-        newFormData.append('refferal', marketer)
-        newFormData.append('message', message)
 
-        axios.post('https://formsubmit.co/ronaldkelechi11@gmail.com', {
+        data.append('name', name);
+        data.append('email', email)
+        data.append('telephone', telephone)
+        data.append('refferal', marketer)
+        data.append('message', message)
+
+        let config = {
             method: 'post',
-            data: newFormData,
-        }).then((result) => {
-            console.log(result);
-            alert('Message Sent')
-        }).catch((err) => {
-            console.log(err);
-            alert('Error sending Mail. Please try Again Later')
-        });
+            maxBodyLength: Infinity,
+            url: apiUrl,
+            data: data
+        };
+
+        axios.request(config)
+            .then((response) => {
+                alert('Message Successfully Sent')
+                console.log(JSON.stringify(response.data));
+            })
+            .catch((error) => {
+                alert('Message could not be sent please try again later')
+                console.log(error);
+            });
     }
 
 

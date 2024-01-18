@@ -19,42 +19,43 @@ import plantain from '../assets/images/plantain.jpeg'
 
 const Menu = () => {
 
-    const noodles = [{
-        "id": 1,
-        "name": "Spicy Suya Noodles",
-        "price": "3,000",
-        "image": "/assets/images/suya.jpg",
-        "description": "Peppered Noodles with Suya Chunks"
-    },
+    const noodles = [
+        {
+            "id": 1,
+            "name": "Spicy Suya Noodles",
+            "price": "3,000",
+            "image": "/assets/images/suya.jpg",
+            "description": "Peppered Noodles with Suya Chunks"
+        },
 
-    {
-        "id": 4,
-        "name": "Native Noodles",
-        "price": "2,500",
-        "image": "/assets/images/native.jpg",
-        "description": "A taste of special African Delicacy"
-    },
-    {
-        "id": 5,
-        "name": "Jollof Noodles and Chicken",
-        "price": "2,900",
-        "image": "/assets/images/jollof.jpg",
-        "description": "Supmtious Nigerian Jollof Noodles"
-    },
-    {
-        "id": 6,
-        "name": "Chinese Noodles and Chicken",
-        "price": "3,000",
-        "image": "/assets/images/chinese.jpg",
-        "description": "Explore our Intercontinental recipe"
-    },
-    {
-        "id": 7,
-        "name": "Oriental Noodles and Chicken",
-        "price": "3,000",
-        "image": "/assets/images/oriental.jpg",
-        "description": "Intercontinental Recipe"
-    },
+        {
+            "id": 2,
+            "name": "Native Noodles",
+            "price": "2,500",
+            "image": "/assets/images/native.jpg",
+            "description": "A taste of special African Delicacy"
+        },
+        {
+            "id": 3,
+            "name": "Jollof Noodles and Chicken",
+            "price": "3,000",
+            "image": "/assets/images/jollof.jpg",
+            "description": "Supmtious Nigerian Jollof Noodles"
+        },
+        {
+            "id": 4,
+            "name": "Chinese Noodles and Chicken",
+            "price": "3,000",
+            "image": "/assets/images/chinese.jpg",
+            "description": "Explore our Intercontinental recipe"
+        },
+        {
+            "id": 5,
+            "name": "Oriental Noodles and Chicken",
+            "price": "3,000",
+            "image": "/assets/images/oriental.jpg",
+            "description": "Intercontinental Recipe"
+        },
     ]
 
     const pastas = [
@@ -90,18 +91,19 @@ const Menu = () => {
             "description": "A taste of special African Delicacy"
         },
     ]
+
     const extras = [
         {
             "id": 1,
             "name": "Plantain and Egg Sauce",
-            "price": "2,500",
+            "price": "2,000",
             "image": plantain,
             "description": "A sweet and spicy meal"
         },
         {
             "id": 2,
             "name": "Yummy yam and Egg-Sauce",
-            "price": "2,5000",
+            "price": "2,000",
             "image": yamImage,
             "description": "A sweet and spicy meal"
         },
@@ -224,7 +226,6 @@ const Menu = () => {
                 <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
                     {
                         extras.map(menuitem => {
-                            console.log(menuitem.price);
                             return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
                         })
                     }
@@ -243,7 +244,6 @@ function MenuItem({ menuitem }) {
 
     useEffect(() => {
         mainControls.start('visible')
-        console.log("IS IN VIEW");
     }, [isInView])
 
 
@@ -264,7 +264,7 @@ function MenuItem({ menuitem }) {
             <div className="w-full h-auto flex flex-col gap-1 justify-between p-2 text-center">
                 <p className="text-3xl md:text-2xl font-billabong">{menuitem.name}</p>
                 <p className="text-[11px] font-poppins text-slate-400">{menuitem.description}</p>
-                <p className="font-extrabold">N3,500</p>
+                <p className="font-extrabold">{menuitem.price}</p>
                 <p className="text-secondary font-extrabold font-poppins">Free Delivery</p>
             </div>
         </div>
