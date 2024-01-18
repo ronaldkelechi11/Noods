@@ -169,6 +169,18 @@ const Menu = () => {
                 ..Our Menu..
             </p>
 
+            {/* Noodles */}
+            <div className="md:flex gap-5 flex flex-col">
+                <p className="text-center text-primary text-5xl font-billabong mt-10">Noodles</p>
+                <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
+                    {
+                        noodles.map(menuitem => {
+                            return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
+                        })
+                    }
+                </div>
+            </div>
+
             {/* SWALLOWS */}
             <div className="md:flex gap-5 flex flex-col">
                 <p className="text-center text-primary text-5xl font-billabong mt-10">Swallows</p>
@@ -180,6 +192,7 @@ const Menu = () => {
                     }
                 </div>
             </div>
+
 
             {/* PASTAS */}
             <div className="md:flex gap-5 flex flex-col">
@@ -200,19 +213,6 @@ const Menu = () => {
                 <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
                     {
                         rices.map(menuitem => {
-                            return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
-                        })
-                    }
-                </div>
-            </div>
-
-
-            {/* Noodles */}
-            <div className="md:flex gap-5 flex flex-col">
-                <p className="text-center text-primary text-5xl font-billabong mt-10">Noodles</p>
-                <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
-                    {
-                        noodles.map(menuitem => {
                             return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
                         })
                     }
