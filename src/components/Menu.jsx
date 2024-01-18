@@ -264,7 +264,7 @@ function MenuItem({ menuitem }) {
             <div className="w-full h-auto flex flex-col gap-1 justify-between p-2 text-center">
                 <p className="text-3xl md:text-2xl font-billabong">{menuitem.name}</p>
                 <p className="text-[11px] font-poppins text-slate-400">{menuitem.description}</p>
-                <p className="font-extrabold">{menuitem.price}</p>
+                <p className="font-extrabold">N{menuitem.price}</p>
                 <p className="text-secondary font-extrabold font-poppins">Free Delivery</p>
             </div>
         </div>
