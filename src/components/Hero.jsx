@@ -5,7 +5,8 @@ import { motion } from "framer-motion"
 const Hero = () => {
 
     return (
-        <div className="w-screen bg-heroPattern bg-center md:bg-[url('/src/assets/images/4.jpg')] bg-cover">
+        <motion.div
+            className="w-screen bg-black bg-center md:bg-[url('/src/assets/images/4.jpg')] bg-cover">
             <div className="bg-[rgba(0,0,0,0.7)] w-full h-screen flex flex-col">
                 <Navbar />
 
@@ -52,7 +53,7 @@ const Hero = () => {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 
