@@ -8,7 +8,7 @@ const Contact = () => {
     const [message, setMessage] = useState("")
     const [marketer, setMarketer] = useState("")
 
-    const apiUrl = `https://formsubmit.co/'noodsnigeria@gmail.com'`
+    const apiUrl = `https://formsubmit.co/noodsnigeria@gmail.com`
 
     function submitContactForm(e) {
         e.preventDefault();
