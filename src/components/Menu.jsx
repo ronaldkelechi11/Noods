@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
-import { motion, useAnimation, useInView } from "framer-motion"
+import { animate, motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
+
 
 // Swallow Images
 import okra from '../assets/images/okra.jpeg'
@@ -15,10 +16,13 @@ import ogbono from '../assets/images/ogbono.jpeg'
 // Extras
 import yamImage from '../assets/images/yam.jpeg'
 import plantain from '../assets/images/plantain.jpeg'
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+import { useState } from "react";
 
 
 const Menu = () => {
 
+    const [noodlesIsOpen, setNoodleIsOpen] = useState(false)
     const noodles = [
         {
             "id": 1,
@@ -58,6 +62,7 @@ const Menu = () => {
         },
     ]
 
+    const [pastasIsOpen, setPastasIsOpen] = useState(false)
     const pastas = [
         {
             "id": 8,
@@ -75,6 +80,7 @@ const Menu = () => {
         },
     ]
 
+    const [ricesIsOpen, setRicesIsOpen] = useState(false)
     const rices = [
         {
             "id": 1,
@@ -92,6 +98,7 @@ const Menu = () => {
         },
     ]
 
+    const [extrasIsOpen, setExtrasIsOpen] = useState(false)
     const extras = [
         {
             "id": 1,
@@ -109,6 +116,7 @@ const Menu = () => {
         },
     ]
 
+    const [swallowsIsOpen, setSwallowsIsOpen] = useState(false)
     const swallows = [
         {
             "id": 1,
@@ -169,68 +177,138 @@ const Menu = () => {
                 ..Our Menu..
             </p>
 
+
             {/* Noodles */}
-            <div className="md:flex gap-5 flex flex-col">
-                <p className="text-center text-primary text-5xl font-billabong mt-10">Noodles</p>
-                <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
-                    {
-                        noodles.map(menuitem => {
-                            return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
-                        })
-                    }
+            <div className="md:flex gap-2 flex flex-col">
+                <div className="text-center text-primary font-billabong flex flex-row justify-between items-center p-3">
+                    <p className="text-center text-primary text-5xl font-billabong">Noodles</p>
+                    <motion.div
+                        className="text-3xl"
+                        whileHover={{ rotateX: '90' }}
+                        transition={{ duration: 1 }}
+                        onClick={() => { setNoodleIsOpen(!noodlesIsOpen) }}>
+                        {noodlesIsOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                    </motion.div>
                 </div>
+                {
+                    noodlesIsOpen &&
+                    <motion.div
+                        className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
+                        {
+                            noodles.map(menuitem => {
+                                return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
+                            })
+                        }
+                    </motion.div>
+                }
             </div>
 
-            {/* SWALLOWS */}
-            <div className="md:flex gap-5 flex flex-col">
-                <p className="text-center text-primary text-5xl font-billabong mt-10">Swallows</p>
-                <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
-                    {
-                        swallows.map(menuitem => {
-                            return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
-                        })
-                    }
-                </div>
-            </div>
 
 
-            {/* PASTAS */}
-            <div className="md:flex gap-5 flex flex-col">
-                <p className="text-center text-primary text-5xl font-billabong mt-10">Pasta</p>
-                <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
-                    {
-                        pastas.map(menuitem => {
-                            return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
-                        })
-                    }
+            {/* Pastas */}
+            <div className="md:flex gap-2 flex flex-col">
+                <div className="text-center text-primary font-billabong flex flex-row justify-between items-center p-3">
+                    <p className="text-center text-primary text-5xl font-billabong">Pastas</p>
+                    <motion.div
+                        className="text-3xl"
+                        whileHover={{ rotateY: '180deg' }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => { setPastasIsOpen(!pastasIsOpen) }}>
+                        {pastasIsOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                    </motion.div>
                 </div>
+                {
+                    pastasIsOpen &&
+                    <motion.div
+                        className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
+                        {
+                            pastas.map(menuitem => {
+                                return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
+                            })
+                        }
+                    </motion.div>
+                }
             </div>
 
 
             {/* Rices */}
-            <div className="md:flex gap-5 flex flex-col">
-                <p className="text-center text-primary text-5xl font-billabong mt-10">Rices</p>
-                <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
-                    {
-                        rices.map(menuitem => {
-                            return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
-                        })
-                    }
+            <div className="md:flex gap-2 flex flex-col">
+                <div className="text-center text-primary font-billabong flex flex-row justify-between items-center p-3">
+                    <p className="text-center text-primary text-5xl font-billabong">Rices</p>
+                    <motion.div
+                        className="text-3xl"
+                        whileHover={{ rotateY: '180deg' }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => { setRicesIsOpen(!ricesIsOpen) }}>
+                        {ricesIsOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                    </motion.div>
                 </div>
+                {
+                    ricesIsOpen &&
+                    <motion.div
+                        className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
+                        {
+                            rices.map(menuitem => {
+                                return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
+                            })
+                        }
+                    </motion.div>
+                }
             </div>
 
 
-            {/* EXTRAS */}
-            <div className="md:flex gap-5 flex flex-col">
-                <p className="text-center text-primary text-5xl font-billabong mt-10">Extra&apos;s</p>
-                <div className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
-                    {
-                        extras.map(menuitem => {
-                            return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
-                        })
-                    }
+            {/* Swallows */}
+            <div className="md:flex gap-2 flex flex-col">
+                <div className="text-center text-primary font-billabong flex flex-row justify-between items-center p-3">
+                    <p className="text-center text-primary text-5xl font-billabong">Swallows</p>
+                    <motion.div
+                        className="text-3xl"
+                        whileHover={{ rotateY: '180deg' }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => { setSwallowsIsOpen(!swallowsIsOpen) }}>
+                        {swallowsIsOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                    </motion.div>
                 </div>
+                {
+                    swallowsIsOpen &&
+                    <motion.div
+                        className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
+                        {
+                            swallows.map(menuitem => {
+                                return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
+                            })
+                        }
+                    </motion.div>
+                }
             </div>
+
+
+            {/* Extras */}
+            <div className="md:flex gap-2 flex flex-col">
+                <div className="text-center text-primary font-billabong flex flex-row justify-between items-center p-3">
+                    <p className="text-center text-primary text-5xl font-billabong">Extras</p>
+                    <motion.div
+                        className="text-3xl"
+                        whileHover={{ rotateY: '180deg' }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => { setExtrasIsOpen(!extrasIsOpen) }}>
+                        {extrasIsOpen ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
+                    </motion.div>
+                </div>
+                {
+                    extrasIsOpen &&
+                    <motion.div
+                        className="flex flex-col md:flex-row md:flex-wrap gap-3 justify-evenly">
+                        {
+                            extras.map(menuitem => {
+                                return (<MenuItem menuitem={menuitem} key={menuitem.id} />)
+                            })
+                        }
+                    </motion.div>
+                }
+            </div>
+
+
         </div >
     )
 }
@@ -257,7 +335,7 @@ function MenuItem({ menuitem }) {
                 }}
                 initial='hidden'
                 animate={mainControls}
-                transition={{ duration: 0.9, delay: 0.3 }}
+                transition={{ duration: 0.4 }}
                 src={menuitem.image}
                 className="h-[70%] md:h-[60%] w-full object-cover object-center" loading="eager" />
 
@@ -265,7 +343,6 @@ function MenuItem({ menuitem }) {
                 <p className="text-3xl md:text-2xl font-billabong">{menuitem.name}</p>
                 <p className="text-[11px] font-poppins text-slate-400">{menuitem.description}</p>
                 <p className="font-extrabold">N{menuitem.price}</p>
-                <p className="text-secondary font-extrabold font-poppins">Free Delivery</p>
             </div>
         </div>
     )

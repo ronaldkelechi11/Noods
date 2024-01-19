@@ -18,7 +18,7 @@ const Contact = () => {
         data.append('name', name);
         data.append('email', email)
         data.append('telephone', telephone)
-        data.append('refferal', marketer)
+        data.append('refferers code', marketer)
         data.append('message', message)
 
         let config = {
@@ -55,7 +55,7 @@ const Contact = () => {
 
                 <input className="h-[60px] p-2 font-poppins border-b border-gray-300 text-lg text-black placeholder:text-gray-400 outline-none" type="tel" placeholder="Telephone" value={telephone} onChange={(e) => setTelephone(e.target.value)} />
 
-                <input className="h-[60px] p-2 font-poppins border-b border-gray-300 text-lg text-black placeholder:text-gray-400 outline-none" type="tel" placeholder="Refferal Name" value={marketer} onChange={(e) => setMarketer(e.target.value)} />
+                <input className="h-[60px] p-2 font-poppins border-b border-gray-300 text-lg text-black placeholder:text-gray-400 outline-none" type='text' placeholder="Refferal Name" value={marketer} onChange={(e) => setMarketer(e.target.value)} />
 
                 <textarea className="h-[90px] p-2 font-poppins border-b border-gray-300 text-lg text-black placeholder:text-gray-400 outline-none" cols="8" placeholder="Message"
                     value={message} onChange={(e) => setMessage(e.target.value)}>
