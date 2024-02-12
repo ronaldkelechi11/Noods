@@ -15,7 +15,7 @@ export default {
         heroPattern: "url('/src/assets/images/3.jpg')",
         noodlesPattern: "url('/src/assets/images/jollof.jpg')",
         pastasPattern: "url('/src/assets/images/creamy.jpg')",
-        ricesPattern: "url('/src/assets/images/oriental.jpg')",
+        ricesPattern: "url('/src/assets/images/oriental_rice.jpg')",
         swallowsPattern: "url('/src/assets/images/afang.jpeg')",
         extrasPattern: "url('/src/assets/images/yam.jpeg')",
       },

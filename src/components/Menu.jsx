@@ -16,8 +16,9 @@ const Menu = () => {
                 <MenuCard title={'Noodles'} link={'noodles'} />
                 <MenuCard title={'Pastas'} link={'pastas'} />
                 <MenuCard title={'Rices'} link={'rices'} />
-                <MenuCard title={'Swallows'} link={'swallows'} />
+                <MenuCard title={'Small Chops'} link={''} />
                 <MenuCard title={'Extras'} link={'extras'} />
+                <MenuCard title={'Swallows'} link={'swallows'} />
             </div>
         </div >
     )
@@ -40,13 +41,18 @@ function MenuCard({ image, title, link }) {
         case 'Swallows':
             background = "h-48 bg-swallowsPattern bg-center bg-no-repeat bg-cover rounded-xl gap-3"
             break;
+        case 'Small Chops':
+            background = "h-48 bg-black bg-center bg-no-repeat bg-cover rounded-xl gap-3"
+            break;
         case 'Extras':
             background = "h-48 bg-extrasPattern bg-center bg-no-repeat bg-covers rounded-xl gap-3"
             break;
-
         default:
             break;
     }
+
+
+
     return (
         <Link to={link} className={background}>
             <motion.div

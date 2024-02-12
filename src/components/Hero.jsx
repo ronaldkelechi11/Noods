@@ -16,6 +16,7 @@ const Hero = () => {
                         initial={{ y: -1000, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 4, type: 'spring' }}
+                        className="w-52 h-32"
                         src="/assets/images/logo.png" alt="" />
 
 
