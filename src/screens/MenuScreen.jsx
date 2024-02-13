@@ -20,6 +20,10 @@ import yamImage from '../assets/images/yam.jpeg'
 import plantain from '../assets/images/plantain.jpeg'
 import { useState } from "react";
 
+// Rices
+import gnfriedRice from "../assets/images/garnished_fried_rice.jpg";
+import orientalRice from "../assets/images/oriental_rice.jpg";
+
 
 const MenuScreen = () => {
     const { menuitem } = useParams()
@@ -85,14 +89,14 @@ const MenuScreen = () => {
             "id": 1,
             "name": "Delicous Oriental Rice and chicken with desert",
             "price": "3,000",
-            "image": "/assets/images/oriental_rice.jpg",
+            "image": gnfriedRice,
             "description": "A taste of special African Delicacy"
         },
         {
             "id": 2,
             "name": "Well-garnished Fried rice and chicken",
             "price": "3,000",
-            "image": "/assets/images/garnished_fried_rice.jpg",
+            "image": orientalRice,
             "description": "A taste of special African Delicacy"
         },
     ]
@@ -186,7 +190,6 @@ const MenuScreen = () => {
                 </>
             );
 
-
         case 'pastas':
             return (
                 <>
@@ -258,6 +261,8 @@ const MenuScreen = () => {
 
 export default MenuScreen
 
+
+// Backbutton
 function BackButton() {
     return (
         <Link to={-1} className="w-16 h-16 rounded-xl bg-black text-white text-3xl flex justify-center items-center fixed top-0 left-0 m-5">
@@ -266,7 +271,7 @@ function BackButton() {
     )
 }
 
-
+// MenuItem
 function MenuItem({ menuitem }) {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
@@ -289,7 +294,7 @@ function MenuItem({ menuitem }) {
                 animate={mainControls}
                 transition={{ duration: 0.4 }}
                 src={menuitem.image}
-                className="h-[70%] md:h-[60%] w-full object-cover object-center" loading="eager" />
+                className="h-[70%] md:h-[60%] w-full object-cover object-center" />
 
             <div className="w-full h-auto flex flex-col gap-1 justify-between p-2 text-center">
                 <p className="text-3xl md:text-2xl font-billabong">{menuitem.name}</p>

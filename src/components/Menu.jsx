@@ -42,7 +42,7 @@ function MenuCard({ image, title, link }) {
             background = "h-48 bg-swallowsPattern bg-center bg-no-repeat bg-cover rounded-xl gap-3"
             break;
         case 'Small Chops':
-            background = "h-48 bg-black bg-center bg-no-repeat bg-cover rounded-xl gap-3"
+            background = "h-48 bg-smallChopPattern bg-center bg-no-repeat bg-cover rounded-xl gap-3"
             break;
         case 'Extras':
             background = "h-48 bg-extrasPattern bg-center bg-no-repeat bg-covers rounded-xl gap-3"

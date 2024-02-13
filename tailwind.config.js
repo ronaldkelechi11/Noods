@@ -18,6 +18,7 @@ export default {
         ricesPattern: "url('/src/assets/images/oriental_rice.jpg')",
         swallowsPattern: "url('/src/assets/images/afang.jpeg')",
         extrasPattern: "url('/src/assets/images/yam.jpeg')",
+        smallChopPattern: "url('/src/assets/images/small chops.JPG')",
       },
       fontFamily: {
         billabong: 'Billabong',
